@@ -65,6 +65,7 @@ class BinarySearchTree {
         }
         return false;
     }
+    // Time complexity is the same as others but space complexity is higher as the node count grows large
     BFS(){
         var node = this.root,
             data = [],
@@ -79,6 +80,7 @@ class BinarySearchTree {
         }
         return data;
     }
+    // Can be used to "export" a tree structure so that it's easily reconstructed or copied
     DFSPreOrder(){
         var data = [];
         function traverse(node){
@@ -89,6 +91,7 @@ class BinarySearchTree {
         traverse(this.root);
         return data;
     }
+    
     DFSPostOrder(){
         var data = [];
         function traverse(node){
@@ -99,6 +102,7 @@ class BinarySearchTree {
         traverse(this.root);
         return data;
     }
+    // Used commonly with binary search trees, get nodes in tree in order
     DFSInOrder(){
         var data = [];
         function traverse(node){
